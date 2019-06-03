@@ -186,15 +186,15 @@ zooAnimals.forEach(animal => animalNames.push(`Name: ${animal.animal_name}, Scie
 console.log(animalNames);
 
 
+/* Request 2: .map()
 
-/* Request 2: .map()    
-
-The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
+The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the result.
 
 */
 
-const lowerCase = [];
+const lowerCase = zooAnimals.map(animal => animal.animal_name.toLowerCase());
 console.log(lowerCase);
+
 
 /* Request 3: .filter() 
 
