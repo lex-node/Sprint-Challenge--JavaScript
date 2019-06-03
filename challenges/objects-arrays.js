@@ -12,23 +12,51 @@
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
+class Dinosaur {
+    constructor(name, diet, weight, length, period) {
+        this.name = name,
+        this.diet = diet,
+        this.weight = weight,
+        this.length = length,
+        this.period = period
+    }
+
+}
+
+const tyrannosaurus = new Dinosaur("tyrannosaurus", "carnivorous", "7000kg", "12m", "Late Cretaceous");
+const stegosaurus = new Dinosaur("stegosaurus", "herbivorous", "2000kg", "9m", "Late Jurassic");
+const velociraptor = new Dinosaur("velociraptor", "carnivorous", "15kg", "1.8m", "Late Cretaceous");
+
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+class Tyrannosaurus extends Dinosaur {
+    constructor(name, diet, weight, length, period) {
+        super(name, diet, weight, length, period);
+    }
+
+    roar() {
+        return "RAWERSRARARWERSARARARRRR!";
+    }
+}
+
+let bob = new Tyrannosaurus("tyrannosaurus", "carnivorous", "7000kg", "12m", "Late Cretaceous");
+
+
+console.log(bob.roar());
 
 
 // ==== Arrays ====
